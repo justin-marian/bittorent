@@ -10,7 +10,7 @@ The simulation captures core BitTorrent mechanics, distributing file segments ac
 | Component   | Description                                                                                          |
 |-------------|------------------------------------------------------------------------------------------------------|
 | **Tracker** | Acts as a central node, managing file segment locations across the network and guiding peers.        |
-| **Clients** | Download and upload file segments with other clients, forming a cooperative data-sharing network.    |
+| **Clients** | Download and upload file segments with other clients (**coperative data-sharing network**).          |
 
 ## Core Logic
 
@@ -82,6 +82,6 @@ The simulation abstracts certain real-world complexities:
 
 ### Benefits of MPI for Simulation
 
-**Parallel Processing**: Multiple clients operate simultaneously, simulating real-time P2P interactions.
-**Scalability**: MPI’s process-based architecture supports scaling of client interactions.
-**Structured Testing**: Simplified testing of protocol operations and validations in a controlled environment.
+- **Parallel Processing**: Multiple clients operate simultaneously, simulating real-time P2P interactions.
+- **Scalability**: MPI’s process-based architecture supports scaling of client interactions.
+- **Structured Testing**: Simplified testing of protocol operations and validations in a controlled environment.
