@@ -2,14 +2,14 @@
 
 ## Simulation with MPI
 
-This project simulates the BitTorrent protocol for `peer-to-peer` (P2P) file sharing using `MPI` (Message Passing Interface). The simulation captures core BitTorrent mechanics, distributing file segments across multiple nodes, allowing efficient and decentralized file sharing without relying on a central server.
+This project simulates the BitTorrent protocol for `P2P` file sharing using `MPI`. The simulation captures core BitTorrent mechanics, distributing file segments across multiple nodes, allowing efficient and decentralized file sharing without relying on a central server.
 
 ## Overview
 
-| Component   | Description                                                                                     |
-|-------------|-------------------------------------------------------------------------------------------------|
-| **Tracker** | Acts as a central node, managing file segment locations across the network and guiding peers.   |
-| **Clients** | Download and upload file segments with other clients, forming a cooperative data-sharing network.|
+| Component   | Description                                                                                          |
+|-------------|------------------------------------------------------------------------------------------------------|
+| **Tracker** | Acts as a central node, managing file segment locations across the network and guiding peers.        |
+| **Clients** | Download and upload file segments with other clients, forming a **cooperative data-sharing network**.|
 
 ## Core Logic
 
@@ -27,8 +27,8 @@ This setup allows the tracker to efficiently connect clients, minimizing redunda
 
 Each client operates with two active threads to balance its dual role as data consumer and provider:
 
-| Thread             | Description                                                                                     |
-|--------------------|-------------------------------------------------------------------------------------------------|
+| Thread              | Description                                                                                    |
+|---------------------|------------------------------------------------------------------------------------------------|
 | **Download Thread** | Manages segment requests from peers and builds the file.                                       |
 | **Upload Thread**   | Responds to requests from other clients, sharing owned segments.                               |
 
