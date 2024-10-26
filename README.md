@@ -2,16 +2,16 @@
 
 ## Simulation with MPI
 
-This project aims to simulate the BitTorrent protocol for peer-to-peer (P2P) file sharing using `MPI` (Message Passing Interface). The simulation reflects the core mechanics of BitTorrent, where files are divided into segments and shared across multiple nodes. This setup allows for efficient, distributed data transfer without relying on a central server.
+This project aims to simulate the BitTorrent protocol for `peer-to-peer` (P2P) file sharing using `MPI` (Message Passing Interface). The simulation reflects the core mechanics of BitTorrent, where files are divided into segments and shared across multiple nodes. The distribution of data it doesn't rely on a central server.
 
 ## Overview
 
 The simulation has two primary components:
 
-- **Tracker**: Acts as a central reference, managing file segment locations across the network and guiding peers to each other.
+- **Tracker**: Acts as a central node, managing file segment locations across the network and guiding peers to each other.
 - **Clients (Peers)**: Download and share file segments with other clients, creating a cooperative data-sharing network.
 
-## Logic and Mechanics
+## Core Logic
 
 ### 1. Tracker Responsibilities
 
@@ -70,8 +70,6 @@ Certain real-world complexities are abstracted in this simulation:
 - **Controlled Environment**: Peer-to-peer requests are managed through MPI messages rather than actual network traffic, focusing on protocol behavior rather than data transmission.
 
 ### Benefits of MPI for Simulation
-
-Using MPI enhances the simulation by providing:
 
 - **Parallel Processing**: Multiple clients operate concurrently, mimicking a real-time P2P network.
 - **Scalability**: MPI’s process-based design allows for scaling client interactions and file-sharing scenarios.
