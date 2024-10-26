@@ -2,14 +2,15 @@
 
 ## Simulation with MPI
 
-This project simulates the BitTorrent protocol for `P2P` file sharing using `MPI`. The simulation captures core BitTorrent mechanics, distributing file segments across multiple nodes, allowing efficient and decentralized file sharing without relying on a central server.
+This project simulates the BitTorrent protocol for `P2P` file sharing using `MPI`.
+The simulation captures core BitTorrent mechanics, distributing file segments across multiple nodes, allowing efficient and decentralized file sharing without relying on a central server.
 
 ## Overview
 
 | Component   | Description                                                                                          |
 |-------------|------------------------------------------------------------------------------------------------------|
 | **Tracker** | Acts as a central node, managing file segment locations across the network and guiding peers.        |
-| **Clients** | Download and upload file segments with other clients, forming a **cooperative data-sharing network**.|
+| **Clients** | Download and upload file segments with other clients, forming a cooperative data-sharing network.    |
 
 ## Core Logic
 
