@@ -85,14 +85,12 @@ void process_file_segments(string* files, int rank, int& segmentLast, int fIdx, 
         if (client.interval.last > segmentLast) {
             // If the client has a last_hash greater than segmentLast, select it as seed
             int seeder = client.id;
-            
             int sIdx;
             for (sIdx = segmentLast; sIdx < segmentLast + 10 && sIdx < swarm.segmentsNo; sIdx++) {
                 MPI_Send(&fileName, MAX_FILENAME, MPI_CHAR, seeder, 0, MPI_COMM_WORLD);
                 MPI_Recv(&recvMsg, 1, MPI_CHAR, seeder, 1, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
             }
             segmentLast = sIdx;
-
             // Exit loop after processing segments
             break;
         }
