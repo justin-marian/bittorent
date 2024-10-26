@@ -9,7 +9,7 @@ This project aims to simulate the BitTorrent protocol for `peer-to-peer` (P2P) f
 | Component   | Description                                                                                      |
 |-------------|--------------------------------------------------------------------------------------------------|
 | **Tracker** | Acts as a central node, managing file segment locations across the network and guiding peers.    |
-| **Clients** | Download and share file segments with other clients, creating a cooperative data-sharing network.|
+| **Clients** | Download and upload file segments with other clients (**cooperative data-sharing network**).     |
 
 ## Core Logic
 
